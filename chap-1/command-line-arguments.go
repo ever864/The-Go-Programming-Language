@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 func main() {
@@ -13,11 +14,11 @@ func main() {
 	//}
 	//
 
-	s, sep := "", ""
-	for _, arg := range os.Args[1:] {
-		s += sep + arg
-		sep = " ever "
-	}
+	//s, sep := "", ""
+	//for _, arg := range os.Args[1:] {
+	//	s += sep + arg
+	//	sep = " ever "
+	//}
 
-	fmt.Println(s)
+	fmt.Println(strings.Join(os.Args[1:], " "))
 }
